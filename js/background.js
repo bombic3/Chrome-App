@@ -14,4 +14,6 @@ bgImage.src = `img/${chosenImage}`;
 // img태그의 src 지정
 
 document.body.appendChild(bgImage);
-// html body에 태그 넣기
+// html body 마지막에 태그 넣기
+// document.body.prepend(bgImage);
+// html body 첫번째에 태그 넣기
