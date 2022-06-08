@@ -4,13 +4,18 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 // todoList 목록들 localstoryge에 저장하기
-const toDos = [];
+const TODOS_KEY = "toDos";
+
+// 배열 초기값이 비어있어서 현재것만 저장되고 이전것들이 없어짐
+// const toDos = [];
+// 재정의 되는 let으로 정의하기
+let toDos = [];
 
 // storage에 toDos 배열 텍스트로 저장하기
 function saveToDos () {
-  // localStorage.setItem("todos", toDos);
+  // localStorage.setItem(TODOS_KEY, toDos);
   // 배열을 텍스트로 바꿔서 저장
-  localStorage.setItem("todos", JSON.stringify(toDos));
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
 // 삭제 함수
@@ -73,3 +78,33 @@ function handleToDoSubmit () {
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+//3. array에 있는 각각의 item에 대해 실행할 function
+function sayHello (item) {
+  console.log("item갯수만큼 실행될걸", item);
+}
+
+// storage에 저장한 value 화면에 나타내기
+// JSON.parse() => string을 배열로
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+// saveToDos 에 값이 있을 때만 JSON.parse 하겠다
+if (saveToDos !== null ) {
+  const parsedToDos = JSON.parse(savedToDos);
+  console.log(parsedToDos);
+  // js로 array에 있는 각각의 item에 대해 function을 실행.
+  // array는 각각 function을 갖게해주는 forEach를 갖고 있음
+  // parsedToDos.array.forEach(element => {  });
+  parsedToDos.forEach(sayHello);
+
+  // 위의 sayHello function 함축 = arrow(화살표) 함수
+  // item을 받아서 item 사용
+  parsedToDos.forEach((item) => console.log("this is the turn of ", item));
+
+    // 4. 초기값 배열에 전에 있던 toDo 넣어서 복원
+  toDos = parsedToDos;
+
+  // 새로고침해도 화면에 list 나타내기
+  // 각각의 item들에게 paintToDo 함수 실행
+  parsedToDos.forEach(paintToDo);
+}
