@@ -3,6 +3,15 @@ const toDoForm = document.getElementById("todo-form");
 // const toDoInput = toDoForm.querySelector("input"); 밑에랑 같다
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
+// todoList 목록들 localstoryge에 저장하기
+const toDos = [];
+
+// storage에 toDos 배열 텍스트로 저장하기
+function saveToDos () {
+  // localStorage.setItem("todos", toDos);
+  // 배열을 텍스트로 바꿔서 저장
+  localStorage.setItem("todos", JSON.stringify(toDos));
+}
 
 // 삭제 함수
 function deleteToDo (event) {
@@ -29,8 +38,6 @@ function paintToDo(newTodo) {
   // button 클릭하면 지워지는 기능
   button.addEventListener("click",deleteToDo);
 
-
-  
   // li 안에 span 넣기
   li.appendChild(span);
   
@@ -54,8 +61,15 @@ function handleToDoSubmit () {
   // console.log(newTodo, toDoInput.value);
   // 쓰여진값, " " 띄어쓰기 나옴
 
+    //2. toDos array에 newTodo push 하기
+  toDos.push(newTodo);
+    //2. 이 배열을 localstorage에 저장하면 되는데 localstorage는 텍스트만 넣을 수 있음
+
   // todo 내용 그리기 painToDo호출
   paintToDo(newTodo);
+
+    //2. storage에 저장 함수 호출
+  saveToDos();
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
