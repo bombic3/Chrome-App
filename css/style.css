@@ -1,3 +1,71 @@
 .hidden {
   display: none;
 }
+
+body {
+  position: relative;
+  height: 960px;
+}
+img {
+  position: absolute;
+  height: 960px;
+  top: 0;
+  left: 0;
+  z-index: -999;
+}
+
+#clock {
+  /* background-color: yellow; */
+  font-size: 100px;
+  text-align: center;
+  color: aliceblue;
+  padding-top: 20%;
+}
+#greeting {
+  /* background-color: bisque; */
+  width: 100%;
+  height: 50px;
+  color:aliceblue;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  transition: .5s;
+}
+.center {
+  width: 100%;
+  text-align: center;
+  /* background-color: red; */
+  margin: 5% 0;
+}
+#todo-form {
+  margin: 5px 0;
+}
+#todo-list {
+  height: ;
+  color: aliceblue;
+}
+#todo-list li {
+  margin: 3% 0;
+  transition: 1s;
+}
+button {
+  margin-left: 2%;
+  cursor: pointer;
+}
+#quotes {
+  /* padding: 30% 0 10% 0; */
+  color: aliceblue;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#weather {
+  color: aliceblue;
+  position: absolute;
+  top: 3%;
+  right: 5%;
+}
+
