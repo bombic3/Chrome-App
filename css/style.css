@@ -72,8 +72,14 @@ img {
   margin: 5% 0;
 }
 #todo-form {
-  /* background: red; */
   margin: 5px 0;
+}
+#todo-form input {
+  width: 15%;
+  border-radius: 20px;
+  border: none;
+  font-size: 0.75rem;
+  padding: 0.5rem 1.5rem;
 }
 #todo-list {
   /* background: blue; */

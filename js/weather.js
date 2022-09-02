@@ -21,7 +21,7 @@ function onGeoOk (position) {
   console.log("You live in", lat, lon);
   
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-  console.log(url);
+  // console.log(url);
 
   // url 에 갈 필요 없이 JavaScript가 url를 부르도록 fetch 사용
   // fetch(url);

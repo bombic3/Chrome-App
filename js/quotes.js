@@ -45,10 +45,10 @@ const quotes = [
 const quote = document.querySelector("#quotes span:first-child");
 const author = document.querySelector("#quotes span:last-child");
 
-console.log(quotes[Math.floor(Math.random() * quotes.length)]);
+// console.log(quotes[Math.floor(Math.random() * quotes.length)]);
 
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
-console.log(todaysQuote);
+// console.log(todaysQuote);
 
 // 명언과 작가 한 화면에 보이게 하기
 quote.innerText = todaysQuote.quote;
@@ -77,6 +77,6 @@ author.innerText = todaysQuote.author;
 // 0~9사이의 숫자 랜덤으로 뽑기
 // Math.floor(Math.random() * 10)
 
-console.log(Math.floor(Math.random() * 10));
+// console.log(Math.floor(Math.random() * 10));
 
 
