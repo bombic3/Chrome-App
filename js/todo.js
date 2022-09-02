@@ -86,7 +86,7 @@ function handleToDoSubmit (event) {
   const newTodoObj = {
     text: newTodo,
     id: Date.now(),
-  }
+  };
 
     //2. toDos array에 newTodo push 하기
     //2. 이 배열을 localstorage에 저장하면 되는데 localstorage는 텍스트만 넣을 수 있음

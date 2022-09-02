@@ -1,44 +1,44 @@
 // 명언 10개 명언,작가로 배열 준비
 const quotes = [
   {
-    quote: "Don't dwell on the past.",
-    author: "Life",
+    quote: "Life is either a great adventure or nothing.",
+    author: " - Helen Keller",
   },
   {
-    quote: "Believe in yourself.",
-    author: "Life",
+    quote: "If you would be loved, love and be lovable.",
+    author: " - Benjamin Franklin",
   },
   {
-    quote: "Follow your heart.",
-    author: "Life",
+    quote: "Try not to become a man of success but rather try to become a man of value.",
+    author: " - Albert Einstein",
   },
   {
-    quote: "Seize the day.",
-    author: "Life",
+    quote: "I find that the harder I work, the more luck I seem to have.",
+    author: " - Thomas Jefferson",
   },
   {
-    quote: "You only live once.",
-    author: "Life",
+    quote: "I never dreamed about success, I worked for it.",
+    author: " - Estee Lauder",
   },
   {
-    quote: "Past is just past.",
-    author: "Life",
+    quote: "Success is going from failure to failure without a loss of enthusiasm.",
+    author: " - Winston Churchill",
   },
   {
-    quote: "Love yourself.",
-    author: "Life",
+    quote: "The only thing worse than starting something and failing … is not starting something.",
+    author: " - Seth Godin",
   },
   {
     quote: "Where there is a will there is a way.",
-    author: "Angela MerKel",
+    author: " - Angela MerKel",
   },
   {
-    quote: "Don't beat yourself up.",
-    author: "Life",
+    quote: "All progress takes place outside the comfort zone.",
+    author: " - Michael John Bobak",
   },
   {
     quote: "Life is a journey.",
-    author: "Ralph Waldo Emerson",
+    author: " - Ralph Waldo Emerson",
   }
 ];
 

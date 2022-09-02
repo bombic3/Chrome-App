@@ -8,10 +8,12 @@ body {
 }
 img {
   position: absolute;
-  height: 960px;
+  width: 100%;
+  overflow: hidden;
   top: 0;
   left: 0;
   z-index: -999;
+  
 }
 
 #clock {
@@ -19,7 +21,37 @@ img {
   font-size: 100px;
   text-align: center;
   color: aliceblue;
-  padding-top: 20%;
+  padding-top: 10rem;
+}
+#login-form {
+  /* background: red; */
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+#login-form input {
+  margin: 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  padding: 0.25rem;
+}
+#login-form button {
+  margin: 0;
+  background-color: #339af0;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  border: none;
+  padding: 0.4rem 1rem;
+  
+}
+#login-form button:hover {
+  background-color: #1971c2;
 }
 #greeting {
   /* background-color: bisque; */
@@ -27,11 +59,11 @@ img {
   height: 50px;
   color:aliceblue;
   position: absolute;
-  top: 25%;
+  top: 3rem;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  transition: .5s;
+  /* transition: .5s; */
 }
 .center {
   width: 100%;
@@ -40,10 +72,12 @@ img {
   margin: 5% 0;
 }
 #todo-form {
+  /* background: red; */
   margin: 5px 0;
 }
 #todo-list {
-  height: ;
+  /* background: blue; */
+  height: 100px;
   color: aliceblue;
 }
 #todo-list li {
@@ -55,12 +89,10 @@ button {
   cursor: pointer;
 }
 #quotes {
-  /* padding: 30% 0 10% 0; */
+  padding-top: 3rem;
   color: aliceblue;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
 }
 #weather {
   color: aliceblue;
