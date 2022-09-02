@@ -87,12 +87,20 @@ img {
   color: aliceblue;
 }
 #todo-list li {
-  margin: 3% 0;
+  margin-top: 0.5rem;
   transition: 1s;
 }
-button {
+#todo-list button {
+  background: none;
+  border: none;
   margin-left: 2%;
   cursor: pointer;
+  transition: 1s;
+  border-radius: 20px;
+}
+#todo-list button:hover {
+  border-radius: 20px;
+  background: rgba(225, 225, 225, 0.8);
 }
 #quotes {
   padding-top: 3rem;
